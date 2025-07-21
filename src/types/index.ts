@@ -16,3 +16,13 @@ export interface PostTags {
     name:string;
     url:string;
 }
+
+export interface PostParams {
+  limit?: number;
+  offset?: number;
+  sort?: 'asc' | 'desc';
+  category?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  search?: string;
+}
