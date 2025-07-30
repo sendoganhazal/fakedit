@@ -1,46 +1,40 @@
 "use client"
 import React, { useState } from "react";
-import { Html5TwoTone } from "@ant-design/icons";
+import { Html5TwoTone, AppstoreOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
+import Link from 'next/link';
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
   {
-    label: "Fakedit",
-    key: "logo",
-    icon: <Html5TwoTone />,
+    key: 'home',
+    label: (
+      <Link href="/" rel="noopener noreferrer">
+        Fakedit
+      </Link>
+    ),
+    icon: <Html5TwoTone />
   },
-  //   {
-  //     label: 'Navigation Two',
-  //     key: 'app',
-  //     icon: <AppstoreOutlined />,
-  //     disabled: true,
-  //   },
-  //   {
-  //     label: 'Navigation Three - Submenu',
-  //     key: 'SubMenu',
-  //     icon: <SettingOutlined />,
-  //     children: [
-  //       {
-  //         type: 'group',
-  //         label: 'Item 1',
-  //         children: [
-  //           { label: 'Option 1', key: 'setting:1' },
-  //           { label: 'Option 2', key: 'setting:2' },
-  //         ],
-  //       },
-  //       {
-  //         type: 'group',
-  //         label: 'Item 2',
-  //         children: [
-  //           { label: 'Option 3', key: 'setting:3' },
-  //           { label: 'Option 4', key: 'setting:4' },
-  //         ],
-  //       },
-  //     ],
-  //   }
+  {
+    key: 'link2',
+    label: (
+      <Link href="/" rel="noopener noreferrer">
+        Home
+      </Link>
+    ),
+    icon: <AppstoreOutlined />
+  },
+  {
+    key: 'link3',
+    label: (
+      <Link href="/" rel="noopener noreferrer">
+        Home
+      </Link>
+    ),
+    icon: <SettingOutlined />,
+  },
 ];
 
 const Header: React.FC = () => {

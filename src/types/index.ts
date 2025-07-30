@@ -26,3 +26,9 @@ export interface PostParams {
   maxPrice?: number;
   search?: string;
 }
+
+export interface TagList {
+  slug: string,
+  name:string,
+  url:string
+}

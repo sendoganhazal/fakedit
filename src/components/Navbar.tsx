@@ -4,6 +4,7 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import Link from 'next/link';
+import styles from '@/styles/Navbar.module.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -45,13 +46,17 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <Menu
+   <aside className={styles.navbar}>
+     <Menu
+      theme="dark"
       mode="inline"
       onClick={onClick}
       items={items}
       defaultSelectedKeys={['1']}
       selectedKeys={[current]}
+      style={{height:"100%"}}
     />
+   </aside>
   );
 };
 

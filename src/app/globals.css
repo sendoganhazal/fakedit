@@ -1,8 +1,12 @@
+:root {
+ --primary: #eb212e;
+}
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
+  font-family: 'Urbanist', 'Urbanist Fallback'!important;
 }
 
 * {
@@ -17,3 +21,14 @@ a {
   display: block;
 }
 
+:where(.css-dev-only-do-not-override-7t2xvq).ant-tooltip,
+:where(.css-dev-only-do-not-override-7t2xvq)[class^="ant-menu"],:where(.css-dev-only-do-not-override-7t2xvq)[class*=" ant-menu"],
+:where(.css-dev-only-do-not-override-7t2xvq).ant-col,
+:where(.css-dev-only-do-not-override-7t2xvq).ant-row,
+:host{
+  font-family: inherit;
+}
+
+.ant-menu-overflow-item.ant-menu-item {
+  display: flex;
+}

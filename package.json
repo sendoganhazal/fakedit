@@ -11,6 +11,8 @@
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
     "@ant-design/nextjs-registry": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "antd": "^5.26.5",
     "next": "15.4.1",
     "react": "19.1.0",

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import { Col, Row } from "antd";
 
 const urbanist = Urbanist({
@@ -25,9 +24,6 @@ export default function RootLayout({
         <Header />
         <main>
           <Row>
-            <Col xs={24} md={6}>
-              <Navbar />
-            </Col>
             <Col xs={24} md={18}>{children}</Col>
           </Row>
         </main>
