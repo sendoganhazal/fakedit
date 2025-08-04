@@ -6,17 +6,14 @@ export const { Title } = Typography;
 
 
 interface TagListItemProps {
-  tag_name: string[];
+  tags: string[];
 }
 
-const TagListItem: React.FC<TagListItemProps> = ({tag_name}) => {
+const TagListItem: React.FC<TagListItemProps> = ({tags}) => {
   return (
     <section>
      
-        {
-            tag_name?.map((name:string, key:number) => <h2 key={key}>{name}</h2>)
-      
-        }
+       
     </section>
   )
 }
