@@ -16,25 +16,7 @@ const items: MenuItem[] = [
       </Link>
     ),
     icon: <Html5TwoTone />
-  },
-  {
-    key: 'link2',
-    label: (
-      <Link href="/" rel="noopener noreferrer">
-        Home
-      </Link>
-    ),
-    icon: <AppstoreOutlined />
-  },
-  {
-    key: 'link3',
-    label: (
-      <Link href="/" rel="noopener noreferrer">
-        Home
-      </Link>
-    ),
-    icon: <SettingOutlined />,
-  },
+  }
 ];
 
 const Header: React.FC = () => {

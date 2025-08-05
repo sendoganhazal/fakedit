@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/atoms/Header";
 import { Col, Row } from "antd";
+import Navbar from "@/components/atoms/Navbar";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -24,6 +25,9 @@ export default function RootLayout({
         <Header />
         <main>
           <Row>
+            <Col xs={24} md={6}>
+              <Navbar/>
+            </Col>
             <Col xs={24} md={18}>{children}</Col>
           </Row>
         </main>

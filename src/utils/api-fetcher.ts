@@ -1,12 +1,13 @@
 import { Post, TagList } from "@/types";
 
 const POST_BASE_URL = "https://dummyjson.com/posts";
-const ALL_POST_URL = `${POST_BASE_URL}?limit=0`;
-const SORT_BY_VIEWS = `${ALL_POST_URL}&sortBy=views&order=desc`;
+
+const SORT_BY_VIEWS = `${POST_BASE_URL}?limit=0&sortBy=views&order=desc`;
 const TAG_LIST_URL = 'https://dummyjson.com/posts/tags';
 const POSTS_BY_TAG = 'https://dummyjson.com/posts/tag'
 const USER_BASE_URL = 'https://dummyjson.com/users';
-export async function fetchAllPost(): Promise<Post[]> {
+export async function fetchAllPost(limit:string): Promise<Post[]> {
+  const ALL_POST_URL = `${POST_BASE_URL}?limit=${limit}`;
   try {
     const response = await fetch(ALL_POST_URL);
     
@@ -36,8 +37,9 @@ export async function fetchTagList(): Promise<TagList[]> {
   }
 }
 export async function fetchPostByTag(limit:string,tag:string) {
+  const url = `${POST_BASE_URL}?limit=0`
   try {
-    const response = await fetch(ALL_POST_URL);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`API isteği başarısız oldu: ${response.statusText}`);
     }
