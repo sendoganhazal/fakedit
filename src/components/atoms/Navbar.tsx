@@ -28,10 +28,10 @@ const items: MenuItem[] = [
     icon: <AppstoreOutlined />
   },
   {
-    key: 'link3',
+    key: 'topics',
     label: (
-      <Link href="/" rel="noopener noreferrer">
-        Home
+      <Link href="/topics" rel="noopener noreferrer">
+        Topics
       </Link>
     ),
     icon: <SettingOutlined />,
