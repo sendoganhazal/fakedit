@@ -1,8 +1,11 @@
+import TagList from '@/components/organisms/TagList'
 import React from 'react'
 
 const Topics = () => {
   return (
-    <div>page</div>
+    <div>
+        <TagList/>
+    </div>
   )
 }
 
